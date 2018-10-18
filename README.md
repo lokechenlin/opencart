@@ -38,3 +38,14 @@ Example:
     -e ADMIN_PASSWORD=1234 \
     -v <absolute path>:/data/www \
     --name opencart opencart
+
+
+## Visual Studio Extension (Recommendation)
+* Docker
+* Git History
+* PHP IntelliSense
+* PHP cs fixer
+    - phpcs --standard=phpcs.xml opencart
+    - https://github.com/opencart/opencart/tree/master/tests/phpcs/OpenCart 
+* PHP Debug
+* markdownlint
