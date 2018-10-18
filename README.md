@@ -14,7 +14,7 @@ Example:
 
     docker build -t opencart .
 
-## To run Docker image
+## To run container for production
 
 Example:
 
@@ -27,5 +27,14 @@ Example:
     -e DB_PASSWORD=1234 \
     --name opencart opencart
 
+ ## To do development
+ * Use volume mapping
 
-    
+Example:
+
+    docker run -it --rm \
+    --cap-add SYS_PTRACE \
+    -p 8080:80  -p 8081:81 -p 8082:9001 \
+    -e ADMIN_PASSWORD=1234 \
+    -v <absolute path>:/data/www \
+    --name opencart opencart
